@@ -1,6 +1,7 @@
 import { DaysAlive } from "@/components/home/daysAlive";
 import { EmploymentTimeline } from "@/components/home/employmentTimeline";
 import { GitHubContributions } from "@/components/home/githubContributions";
+import { LocationMap } from "@/components/home/locationMap";
 import { TechStack } from "@/components/home/techStack/techStack";
 import { Header } from "@/components/shared/header";
 import { Button } from "@/components/ui/button";
@@ -33,6 +34,9 @@ export default function Home() {
               </div>
               <div className="xl:col-span-4">
                 <EmploymentTimeline />
+              </div>
+              <div className="xl:col-span-4">
+                <LocationMap />
               </div>
             </div>
           </div>
