@@ -1,7 +1,9 @@
 import { AiFillGithub, AiOutlineLinkedin } from "react-icons/ai";
 import { MdOutlineEmail } from "react-icons/md";
-import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
+
 import { ModeToggle } from "./modeToggle";
+
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 
 export function Header() {
   return (
@@ -15,10 +17,10 @@ export function Header() {
         </div>
       </div>
       <div
-        className="flex items-center justify-center sm:justify-start w-full mt-4 p-2 lg:p-0 lg:mt-0"
+        className="flex items-center justify-center sm:justify-start w-full mt-4 p-2 lg:p-0 lg:mt-0 "
         style={{ background: `url(/jazzy.png)`, backgroundSize: "cover" }}
       >
-        <h1 className="text-3xl lg:text-5xl xl:text-8xl font-medium align-middle">
+        <h1 className="text-3xl lg:text-5xl xl:text-8xl font-medium align-middle text-shadow">
           BryanDuckworth<span className="text-2xl xl:text-6xl">.com</span>
         </h1>
       </div>
@@ -36,7 +38,10 @@ export function Header() {
             <span className="pr-2">LinkedIn</span>
             <AiOutlineLinkedin className="inline" />
           </a>
-          <a href="mailto:bryanduckworth@gmail.com" className="mt-2 lg:hidden xl:block">
+          <a
+            href="mailto:bryanduckworth@gmail.com"
+            className="mt-2 lg:hidden xl:block"
+          >
             <span className="pr-2">bryanduckworth@gmail.com</span>
             <MdOutlineEmail className="inline" />
           </a>

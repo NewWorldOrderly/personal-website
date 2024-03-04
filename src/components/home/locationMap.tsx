@@ -1,5 +1,7 @@
 "use client";
 
+import dynamic from "next/dynamic";
+
 import {
   Card,
   CardContent,
@@ -8,49 +10,36 @@ import {
   CardTitle,
 } from "../ui/card";
 
-import dynamic from "next/dynamic";
-
 const Globe = dynamic(
   () => import("react-globe.gl").then((mod) => mod.default),
   {
     ssr: false,
-  }
+  },
 );
 
 export function LocationMap() {
   const myData = [
     {
-      lat: 29.953204744601763,
-      lng: -90.08925929478903,
+      lat: 32.25346,
+      lng: -110.911789,
       altitude: 0.4,
-      color: "#00ff33",
-    },
-    {
-      lat: 28.621322361013092,
-      lng: 77.20347613099612,
-      altitude: 0.4,
-      color: "#ff0000",
-    },
-    {
-      lat: -43.1571459086602,
-      lng: 172.72338919659848,
-      altitude: 0.4,
-      color: "#ffff00",
+      color: "orange",
     },
   ];
+
   return (
     <Card>
       <CardHeader>
         <CardTitle className="tracking-tight text-base font-normal">
           Current Location
         </CardTitle>
-        <CardDescription>Previous locations in purple</CardDescription>
+        <CardDescription>Tucson, Arizona</CardDescription>
       </CardHeader>
-      <CardContent>
-        {" "}
-        <div className="cursor-move w-auto">
+      <CardContent className="flex justify-center">
+        <div className="cursor-move w-min">
           <Globe
             globeImageUrl={"earth-dark.jpg"}
+            backgroundColor="#00000000"
             pointsData={myData}
             pointAltitude="altitude"
             pointColor="color"
