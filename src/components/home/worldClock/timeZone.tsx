@@ -6,9 +6,14 @@ import { SlClock, SlGlobeAlt } from "react-icons/sl";
 type TimeZoneProps = {
   label: string;
   timeZone: string;
+  primary?: boolean;
 };
 
-export function TimeZone({ label, timeZone }: Readonly<TimeZoneProps>) {
+export function TimeZone({
+  label,
+  timeZone,
+  primary = false,
+}: Readonly<TimeZoneProps>) {
   const [time, setTime] = useState("");
 
   useEffect(() => {
@@ -35,13 +40,31 @@ export function TimeZone({ label, timeZone }: Readonly<TimeZoneProps>) {
 
   return (
     <div>
-      <div className="flex items-center space-x-4">
-        <SlGlobeAlt />
-        <p>{label}</p>
+      <div className="flex items-center space-x-3">
+        <div className="grow">
+          <SlGlobeAlt />
+        </div>
+        <p
+          className={
+            primary ? "grow text-right text-accent" : "grow text-right"
+          }
+        >
+          {label}
+        </p>
       </div>
-      <div className="flex items-center space-x-4">
-        <SlClock />
-        <div className="font-bold">{time}</div>
+      <div className="flex grow items-center space-x-3">
+        <div className="grow">
+          <SlClock />
+        </div>
+        <div
+          className={
+            primary
+              ? "grow font-bold text-lg text-right text-primary"
+              : "grow font-bold text-lg text-right"
+          }
+        >
+          {time}
+        </div>
       </div>
     </div>
   );

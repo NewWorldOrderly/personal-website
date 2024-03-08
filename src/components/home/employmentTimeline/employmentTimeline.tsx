@@ -23,13 +23,13 @@ export function EmploymentTimeline() {
         </CardTitle>
         <CardDescription>
           <a href="Bryan Duckworth - Resume.pdf" className="flex items-center">
-            <FaRegFilePdf className="inline mr-2" />
+            <FaRegFilePdf className="inline mr-2 text-primary" />
             Download resume
           </a>
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <ScrollArea className="whitespace-nowrap rounded-md border">
+        <ScrollArea className="whitespace-nowrap rounded-md border bg-secondary">
           <div className="flex space-x-4 p-4">
             <EmploymentTimelineCard
               title="Arrive Recommerce"

@@ -1,4 +1,5 @@
 import { FaEarthAmericas } from "react-icons/fa6";
+
 import {
   Card,
   CardContent,
@@ -12,7 +13,7 @@ export function DaysAlive() {
   const startDate = new Date("1982-12-12");
   const differenceInMilliseconds = Number(currentDate) - Number(startDate);
   const differenceInDays = Math.floor(
-    differenceInMilliseconds / (1000 * 60 * 60 * 24)
+    differenceInMilliseconds / (1000 * 60 * 60 * 24),
   );
 
   return (
@@ -25,7 +26,7 @@ export function DaysAlive() {
       </CardHeader>
       <CardContent>
         <div className="flex items-center text-2xl font-bold">
-          <FaEarthAmericas className="inline mr-2" />
+          <FaEarthAmericas className="inline mr-2 text-primary" />
           {differenceInDays.toLocaleString()}
         </div>
       </CardContent>

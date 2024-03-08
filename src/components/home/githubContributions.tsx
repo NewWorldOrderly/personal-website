@@ -1,3 +1,5 @@
+import { AiFillGithub } from "react-icons/ai";
+
 import {
   Card,
   CardContent,
@@ -5,7 +7,6 @@ import {
   CardHeader,
   CardTitle,
 } from "../ui/card";
-import { AiFillGithub } from "react-icons/ai";
 
 export function GitHubContributions() {
   return (
@@ -18,7 +19,7 @@ export function GitHubContributions() {
       </CardHeader>
       <CardContent>
         <div className="flex items-center text-2xl font-bold">
-          <AiFillGithub className="inline mr-2" />
+          <AiFillGithub className="inline mr-2 text-primary" />
           3,451
         </div>
       </CardContent>

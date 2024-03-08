@@ -1,3 +1,5 @@
+import { TechStackHover } from "./techStackHover";
+
 import {
   Card,
   CardContent,
@@ -6,11 +8,9 @@ import {
   CardTitle,
 } from "../../ui/card";
 
-import { TechStackHover } from "./techStackHover";
-
 export function TechStack() {
   return (
-    <Card>
+    <Card className="border-accent border-2">
       <CardHeader>
         <CardTitle className="tracking-tight text-base font-normal">
           Tech Stack

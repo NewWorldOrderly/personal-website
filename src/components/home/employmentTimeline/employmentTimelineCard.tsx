@@ -23,7 +23,7 @@ export function EmploymentTimelineCard({
   imageUrl,
 }: Readonly<EmploymentTimelineCardProps>) {
   return (
-    <Card>
+    <Card className="border-primary">
       <CardHeader>
         <CardTitle className="tracking-tight text-base font-normal">
           {title}
@@ -34,10 +34,22 @@ export function EmploymentTimelineCard({
         <div className="flex justify-center">
           {url ? (
             <a href={url} target="_blank" rel="noreferrer">
-              <Image src={imageUrl} alt={title} width={100} height={100} />
+              <Image
+                src={imageUrl}
+                alt={title}
+                width={100}
+                height={100}
+                className="border"
+              />
             </a>
           ) : (
-            <Image src={imageUrl} alt={title} width={100} height={100} />
+            <Image
+              src={imageUrl}
+              alt={title}
+              width={100}
+              height={100}
+              className="border"
+            />
           )}
         </div>
       </CardContent>

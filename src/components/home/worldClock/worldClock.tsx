@@ -14,20 +14,25 @@ export function WorldClock() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Time Zones</CardTitle>
+        <CardTitle className="tracking-tight text-base font-normal">
+          Time Zones
+        </CardTitle>
         <CardDescription>What is time?</CardDescription>
       </CardHeader>
-      <CardContent className="space-y-4">
-        <TimeZone label="Tucson, Arizona" timeZone="America/Phoenix" />
+      <CardContent className="space-y-3">
+        <Separator />
+        <TimeZone label="Los Angeles, CA" timeZone="America/Los_Angeles" />
         <Separator />
         <TimeZone
-          label="Los Angeles, Califoria"
-          timeZone="America/Los_Angeles"
+          label="Tucson, AZ"
+          timeZone="America/Phoenix"
+          primary={true}
         />
         <Separator />
-        <TimeZone label="New York, New York" timeZone="America/New_York" />
+
+        <TimeZone label="Denver, CO" timeZone="America/Denver" />
         <Separator />
-        <TimeZone label="Denver, Colorado" timeZone="America/Denver" />
+        <TimeZone label="Houston, TX" timeZone="America/Chicago" />
       </CardContent>
     </Card>
   );

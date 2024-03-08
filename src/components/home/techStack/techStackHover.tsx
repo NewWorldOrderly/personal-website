@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import * as Icons from "react-icons/si";
+
 import {
   HoverCard,
   HoverCardContent,
@@ -25,12 +26,13 @@ export function TechStackHover({
   experience,
 }: TechStackHoverProps) {
   const [IconComponent, setIconComponent] = useState<React.ElementType | null>(
-    null
+    null,
   );
 
   useEffect(() => {
     async function loadIcon() {
       const { [icon]: ImportedIcon } = await import("react-icons/si");
+
       setIconComponent(() => ImportedIcon);
     }
     loadIcon();
