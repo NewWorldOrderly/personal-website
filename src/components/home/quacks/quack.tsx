@@ -26,10 +26,10 @@ export function Quack({ message, timestamp }: Readonly<QuackProps>) {
   return (
     <div className="space-y-4">
       <div className="flex items-start">
-        <GiDuck className="mt-1 mr-2" />
+        <GiDuck className="mr-2 mt-1" />
         <p>{message}</p>
       </div>
-      <div className="text-xs text-muted-foreground">{formatTime(date)}</div>
+      <div className="text-muted-foreground text-xs">{formatTime(date)}</div>
       <Separator />
     </div>
   );

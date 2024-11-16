@@ -23,12 +23,12 @@ import { Textarea } from '@/components/ui/textarea';
 // eslint-disable-next-line import/no-default-export
 export default function Home() {
   return (
-    <main className="flex max-w-screen min-h-screen flex-col items-start justify-start p-8 lg:px-24 lg:py-16">
+    <main className="max-w-screen flex min-h-screen flex-col items-start justify-start p-8 lg:px-24 lg:py-16">
       <Header />
-      <div className="mt-4 theme-orange w-full overflow-hidden">
-        <div className="grid md:grids-col-2 md:gap-4 lg:grid-cols-12 xl:grid-cols-14 xl:gap-4">
+      <div className="theme-orange mt-4 w-full overflow-hidden">
+        <div className="md:grids-col-2 xl:grid-cols-14 grid md:gap-4 lg:grid-cols-12 xl:gap-4">
           <div className="space-y-4 lg:col-span-4 xl:col-span-7">
-            <div className="grid gap-4 grid-cols-1 xl:grid-cols-4 xl:grid-rows-1">
+            <div className="grid grid-cols-1 gap-4 xl:grid-cols-4 xl:grid-rows-1">
               <div className="xl:col-span-2">
                 <TechStack />
               </div>
@@ -61,7 +61,7 @@ export default function Home() {
                   <CardContent>
                     <div className="flex space-x-4">
                       <Textarea
-                        className="min-h-[42px] h-[42px] w-full bg-muted"
+                        className="bg-muted h-[42px] min-h-[42px] w-full"
                         placeholder="Type your message here..."
                       />
                       <Button className="disabled">Send</Button>
@@ -80,7 +80,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <Separator className="my-8 bg-accent" />
+        <Separator className="bg-accent my-8" />
         <Footer />
       </div>
     </main>

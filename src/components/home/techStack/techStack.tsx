@@ -15,10 +15,10 @@ export function TechStack() {
     <Card className="border-accent border-2">
       <CardHeader>
         <div className="flex justify-between">
-          <CardTitle className="tracking-tight text-base font-normal ">
+          <CardTitle className="text-base font-normal tracking-tight ">
             Tech Stack
           </CardTitle>
-          <Badge className="bg-gradient-to-r from-accent to-primary bg-[length:200%_200%] animate-gradient text-white">
+          <Badge className="from-accent to-primary animate-gradient bg-gradient-to-r bg-[length:200%_200%] text-white">
             10+ Years XP
           </Badge>
         </div>
@@ -26,7 +26,7 @@ export function TechStack() {
         <CardDescription>Technologies I have experience with</CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="flex flex-nowrap text-2xl space-x-2 overflow-scroll">
+        <div className="flex flex-nowrap space-x-2 overflow-scroll text-2xl">
           <TechStackHover
             icon="SiTypescript"
             href="https://www.typescriptlang.org/"

@@ -14,8 +14,8 @@ export function Quacks() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="flex items-center tracking-tight text-2xl font-normal">
-          <div className="border-2 border-primary rounded-full p-1 mr-2">
+        <CardTitle className="flex items-center text-2xl font-normal tracking-tight">
+          <div className="border-primary mr-2 rounded-full border-2 p-1">
             <Avatar>
               <AvatarImage src="https://ca.slack-edge.com/TC3FUBR9A-U05G4CYTNE8-495606ea2d2a-512" />
               <AvatarFallback>:)</AvatarFallback>

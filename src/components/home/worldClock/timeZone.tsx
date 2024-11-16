@@ -46,7 +46,7 @@ export function TimeZone({
         </div>
         <p
           className={
-            primary ? 'grow text-right text-accent' : 'grow text-right'
+            primary ? 'text-accent grow text-right' : 'grow text-right'
           }
         >
           {label}
@@ -59,8 +59,8 @@ export function TimeZone({
         <div
           className={
             primary
-              ? 'grow font-bold text-lg text-right text-primary'
-              : 'grow font-bold text-lg text-right'
+              ? 'text-primary grow text-right text-lg font-bold'
+              : 'grow text-right text-lg font-bold'
           }
         >
           {time}

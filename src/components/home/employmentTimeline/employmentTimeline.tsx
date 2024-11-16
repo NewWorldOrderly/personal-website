@@ -17,18 +17,18 @@ export function EmploymentTimeline() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="tracking-tight text-base font-normal">
+        <CardTitle className="text-base font-normal tracking-tight">
           Employment History
         </CardTitle>
         <CardDescription>
           <a href="Bryan Duckworth - Resume.pdf" className="flex items-center">
-            <FaRegFilePdf className="inline mr-2 text-primary" />
+            <FaRegFilePdf className="text-primary mr-2 inline" />
             Download resume
           </a>
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <ScrollArea className="whitespace-nowrap rounded-md border bg-secondary">
+        <ScrollArea className="bg-secondary whitespace-nowrap rounded-md border">
           <div className="flex space-x-4 p-4">
             <EmploymentTimelineCard
               title="Arrive Recommerce"

@@ -25,7 +25,7 @@ export function EmploymentTimelineCard({
   return (
     <Card className="border-primary">
       <CardHeader>
-        <CardTitle className="tracking-tight text-base font-normal">
+        <CardTitle className="text-base font-normal tracking-tight">
           {title}
         </CardTitle>
         <CardDescription>{description}</CardDescription>

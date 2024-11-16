@@ -19,14 +19,14 @@ export function DaysAlive() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="tracking-tight text-base font-normal">
+        <CardTitle className="text-base font-normal tracking-tight">
           Total Days on Earth
         </CardTitle>
         <CardDescription>Feels good to be alive</CardDescription>
       </CardHeader>
       <CardContent>
         <div className="flex items-center text-2xl font-bold">
-          <FaEarthAmericas className="inline mr-2 text-primary" />
+          <FaEarthAmericas className="text-primary mr-2 inline" />
           {differenceInDays.toLocaleString()}
         </div>
       </CardContent>

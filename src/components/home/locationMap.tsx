@@ -30,7 +30,7 @@ export function LocationMap() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="tracking-tight text-base font-normal">
+        <CardTitle className="text-base font-normal tracking-tight">
           Current Location
         </CardTitle>
         <CardDescription>
@@ -44,7 +44,7 @@ export function LocationMap() {
         </CardDescription>
       </CardHeader>
       <CardContent className="flex justify-center">
-        <div className="cursor-move w-min">
+        <div className="w-min cursor-move">
           {/* <Globe
             globeImageUrl={'earth-dark.jpg'}
             backgroundColor="#00000000"

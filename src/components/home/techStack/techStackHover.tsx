@@ -45,11 +45,11 @@ export function TechStackHover({
           {IconComponent ? (
             <IconComponent className="mt-2" />
           ) : (
-            <Skeleton className="w-[24px] h-[24px] rounded-full" />
+            <Skeleton className="h-[24px] w-[24px] rounded-full" />
           )}
         </HoverCardTrigger>
         <HoverCardContent className="w-80">
-          <div className="flex justify-between space-x-4 items-start">
+          <div className="flex items-start justify-between space-x-4">
             <div className="text-4xl">
               {IconComponent ? <IconComponent /> : null}
             </div>
@@ -57,7 +57,7 @@ export function TechStackHover({
               <h4 className="text-sm font-semibold">{title}</h4>
               <p className="text-sm">{description}</p>
               <div className="flex items-center pt-2">
-                <span className="text-xs text-muted-foreground">
+                <span className="text-muted-foreground text-xs">
                   {experience}
                 </span>
               </div>

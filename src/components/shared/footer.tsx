@@ -2,8 +2,8 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="flex flex-col lg:flex-row gap-3 text-center justify-between">
-      <p className="text-muted-foreground text-xs text-wrap">
+    <div className="flex flex-col justify-between gap-3 text-center lg:flex-row">
+      <p className="text-muted-foreground text-wrap text-xs">
         This site was constructed using{' '}
         <a href="https://ballersanonymo.us" target="_blank">
           Next.js

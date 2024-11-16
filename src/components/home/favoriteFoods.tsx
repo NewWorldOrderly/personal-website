@@ -17,25 +17,25 @@ export function FavoriteFoods() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="tracking-tight text-base font-normal">
+        <CardTitle className="text-base font-normal tracking-tight">
           Favorite Foods
         </CardTitle>
         <CardDescription>Mmmmmm...</CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col items-center justify-center space-y-3">
-        <div className="text-5xl pb-1">
+        <div className="pb-1 text-5xl">
           <FaPizzaSlice />
         </div>
         <Separator />
-        <div className="text-5xl pb-1">
+        <div className="pb-1 text-5xl">
           <PiHamburgerLight />
         </div>
         <Separator />
-        <div className="text-5xl pb-1">
+        <div className="pb-1 text-5xl">
           <GiTacos />
         </div>
         <Separator />
-        <div className="text-5xl pb-1">
+        <div className="pb-1 text-5xl">
           <MdOutlineRamenDining />
         </div>
       </CardContent>

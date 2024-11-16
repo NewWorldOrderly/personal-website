@@ -14,7 +14,7 @@ export function WorldClock() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="tracking-tight text-base font-normal">
+        <CardTitle className="text-base font-normal tracking-tight">
           Time Zones
         </CardTitle>
         <CardDescription>What is time?</CardDescription>
