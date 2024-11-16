@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import * as Icons from 'react-icons/si';
 
 import {
   HoverCard,
@@ -10,8 +9,9 @@ import {
 } from '@/components/ui/hover-card';
 import { Skeleton } from '@/components/ui/skeleton';
 
+type IconKeys = keyof typeof import('react-icons/si');
 type TechStackHoverProps = {
-  icon: keyof typeof Icons;
+  icon: IconKeys;
   href: string;
   title: string;
   description: string;
@@ -31,9 +31,12 @@ export function TechStackHover({
 
   useEffect(() => {
     async function loadIcon() {
-      const { [icon]: ImportedIcon } = await import('react-icons/si');
-
-      setIconComponent(() => ImportedIcon);
+      const icons = await import('react-icons/si');
+      if (icons[icon]) {
+        setIconComponent(() => icons[icon]);
+      } else {
+        console.warn(`Icon "${icon}" not found in react-icons/si`);
+      }
     }
     loadIcon();
   }, [icon]);
@@ -41,12 +44,14 @@ export function TechStackHover({
   return (
     <div className="flex grow">
       <HoverCard>
-        <HoverCardTrigger>
-          {IconComponent ? (
-            <IconComponent className="mt-2" />
-          ) : (
-            <Skeleton className="h-[24px] w-[24px] rounded-full" />
-          )}
+        <HoverCardTrigger asChild>
+          <a href={href} target="_blank" rel="noopener noreferrer">
+            {IconComponent ? (
+              <IconComponent className="mt-2" />
+            ) : (
+              <Skeleton className="h-[24px] w-[24px] rounded-full" />
+            )}
+          </a>
         </HoverCardTrigger>
         <HoverCardContent className="w-80">
           <div className="flex items-start justify-between space-x-4">
