@@ -1,18 +1,17 @@
-import * as React from "react";
-import { FaRegFilePdf } from "react-icons/fa";
+import { FaRegFilePdf } from 'react-icons/fa';
 
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-
-import { EmploymentTimelineCard } from "./employmentTimelineCard";
-import { EmploymentTimelineSpacer } from "./employmentTimelineSpacer";
+import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 
 import {
   Card,
+  CardContent,
+  CardDescription,
   CardHeader,
   CardTitle,
-  CardDescription,
-  CardContent,
-} from "../../ui/card";
+} from '../../ui/card';
+
+import { EmploymentTimelineCard } from './employmentTimelineCard';
+import { EmploymentTimelineSpacer } from './employmentTimelineSpacer';
 
 export function EmploymentTimeline() {
   return (

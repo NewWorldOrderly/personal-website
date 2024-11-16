@@ -1,10 +1,10 @@
 import {
   Card,
+  CardContent,
+  CardDescription,
   CardHeader,
   CardTitle,
-  CardDescription,
-  CardContent,
-} from "../ui/card";
+} from '../ui/card';
 
 export function IllusionCarousel() {
   return (

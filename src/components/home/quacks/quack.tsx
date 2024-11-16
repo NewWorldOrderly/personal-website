@@ -1,6 +1,6 @@
-import { GiDuck } from "react-icons/gi";
+import { GiDuck } from 'react-icons/gi';
 
-import { Separator } from "@/components/ui/separator";
+import { Separator } from '@/components/ui/separator';
 
 type QuackProps = {
   message: string;
@@ -8,18 +8,18 @@ type QuackProps = {
 };
 
 export function Quack({ message, timestamp }: Readonly<QuackProps>) {
-  if (!timestamp) return "";
+  if (!timestamp) return '';
 
   const date = new Date(timestamp);
   const formatTime = (time: number | Date | undefined) => {
-    return new Intl.DateTimeFormat("en-US", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-      hour: "numeric",
-      minute: "numeric",
-      second: "numeric",
-      timeZoneName: "short",
+    return new Intl.DateTimeFormat('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric',
+      timeZoneName: 'short',
     }).format(time);
   };
 

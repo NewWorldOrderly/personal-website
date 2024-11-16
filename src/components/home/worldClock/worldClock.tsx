@@ -1,14 +1,14 @@
-import { Separator } from "@/components/ui/separator";
-
-import { TimeZone } from "./timeZone";
+import { Separator } from '@/components/ui/separator';
 
 import {
   Card,
+  CardContent,
+  CardDescription,
   CardHeader,
   CardTitle,
-  CardDescription,
-  CardContent,
-} from "../../ui/card";
+} from '../../ui/card';
+
+import { TimeZone } from './timeZone';
 
 export function WorldClock() {
   return (

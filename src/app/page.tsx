@@ -1,29 +1,29 @@
-import { DaysAlive } from "@/components/home/daysAlive";
-import { EmploymentTimeline } from "@/components/home/employmentTimeline/employmentTimeline";
-import { FavoriteFoods } from "@/components/home/favoriteFoods";
-import { GitHubContributions } from "@/components/home/githubContributions";
-import { IllusionCarousel } from "@/components/home/illusionCarousel";
-import { LocationMap } from "@/components/home/locationMap";
-import { Quacks } from "@/components/home/quacks/quacks";
-import { TechStack } from "@/components/home/techStack/techStack";
-import { WorldClock } from "@/components/home/worldClock/worldClock";
-import { Footer } from "@/components/shared/footer";
-import { Header } from "@/components/shared/header";
-import { Button } from "@/components/ui/button";
+import { DaysAlive } from '@/components/home/daysAlive';
+import { EmploymentTimeline } from '@/components/home/employmentTimeline/employmentTimeline';
+import { FavoriteFoods } from '@/components/home/favoriteFoods';
+import { GitHubContributions } from '@/components/home/githubContributions';
+import { IllusionCarousel } from '@/components/home/illusionCarousel';
+import { LocationMap } from '@/components/home/locationMap';
+import { Quacks } from '@/components/home/quacks/quacks';
+import { TechStack } from '@/components/home/techStack/techStack';
+import { WorldClock } from '@/components/home/worldClock/worldClock';
+import { Footer } from '@/components/shared/footer';
+import { Header } from '@/components/shared/header';
+import { Button } from '@/components/ui/button';
 import {
   Card,
+  CardContent,
+  CardDescription,
   CardHeader,
   CardTitle,
-  CardDescription,
-  CardContent,
-} from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import { Textarea } from "@/components/ui/textarea";
+} from '@/components/ui/card';
+import { Separator } from '@/components/ui/separator';
+import { Textarea } from '@/components/ui/textarea';
 
 // eslint-disable-next-line import/no-default-export
 export default function Home() {
   return (
-    <main className="flex max-w-screen min-h-screen flex-col items-start justify-start p-8 lg:p-24">
+    <main className="flex max-w-screen min-h-screen flex-col items-start justify-start p-8 lg:px-24 lg:py-16">
       <Header />
       <div className="mt-4 theme-orange w-full overflow-hidden">
         <div className="grid md:grids-col-2 md:gap-4 lg:grid-cols-12 xl:grid-cols-14 xl:gap-4">

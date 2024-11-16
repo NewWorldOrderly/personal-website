@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import React, { useState, useEffect } from "react";
-import * as Icons from "react-icons/si";
+import React, { useEffect, useState } from 'react';
+import * as Icons from 'react-icons/si';
 
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/components/ui/hover-card";
-import { Skeleton } from "@/components/ui/skeleton";
+} from '@/components/ui/hover-card';
+import { Skeleton } from '@/components/ui/skeleton';
 
 type TechStackHoverProps = {
   icon: keyof typeof Icons;
@@ -31,7 +31,7 @@ export function TechStackHover({
 
   useEffect(() => {
     async function loadIcon() {
-      const { [icon]: ImportedIcon } = await import("react-icons/si");
+      const { [icon]: ImportedIcon } = await import('react-icons/si');
 
       setIconComponent(() => ImportedIcon);
     }
@@ -43,9 +43,7 @@ export function TechStackHover({
       <HoverCard>
         <HoverCardTrigger>
           {IconComponent ? (
-            <a href={href}>
-              <IconComponent className="mt-2" />
-            </a>
+            <IconComponent className="mt-2" />
           ) : (
             <Skeleton className="w-[24px] h-[24px] rounded-full" />
           )}

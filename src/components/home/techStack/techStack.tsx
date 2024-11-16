@@ -1,4 +1,4 @@
-import { TechStackHover } from "./techStackHover";
+import { Badge } from '@/components/ui/badge';
 
 import {
   Card,
@@ -6,15 +6,23 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "../../ui/card";
+} from '../../ui/card';
+
+import { TechStackHover } from './techStackHover';
 
 export function TechStack() {
   return (
     <Card className="border-accent border-2">
       <CardHeader>
-        <CardTitle className="tracking-tight text-base font-normal">
-          Tech Stack
-        </CardTitle>
+        <div className="flex justify-between">
+          <CardTitle className="tracking-tight text-base font-normal ">
+            Tech Stack
+          </CardTitle>
+          <Badge className="bg-gradient-to-r from-accent to-primary bg-[length:200%_200%] animate-gradient text-white">
+            10+ Years XP
+          </Badge>
+        </div>
+
         <CardDescription>Technologies I have experience with</CardDescription>
       </CardHeader>
       <CardContent>

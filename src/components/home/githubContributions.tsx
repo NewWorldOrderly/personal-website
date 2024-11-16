@@ -1,4 +1,4 @@
-import { AiFillGithub } from "react-icons/ai";
+import { AiFillGithub } from 'react-icons/ai';
 
 import {
   Card,
@@ -6,7 +6,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "../ui/card";
+} from '../ui/card';
 
 export function GitHubContributions() {
   return (
@@ -15,7 +15,7 @@ export function GitHubContributions() {
         <CardTitle className="tracking-tight text-base font-normal">
           Total Contributions
         </CardTitle>
-        <CardDescription>git commit -m ":)"</CardDescription>
+        <CardDescription>git commit -m &quot;:)&quot;</CardDescription>
       </CardHeader>
       <CardContent>
         <div className="flex items-center text-2xl font-bold">
