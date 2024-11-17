@@ -1,6 +1,6 @@
-import { FaRegFilePdf } from 'react-icons/fa';
-
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
+
+import { FaRegFilePdf } from 'react-icons/fa';
 
 import {
   Card,
@@ -9,7 +9,6 @@ import {
   CardHeader,
   CardTitle,
 } from '../../ui/card';
-
 import { EmploymentTimelineCard } from './employmentTimelineCard';
 import { EmploymentTimelineSpacer } from './employmentTimelineSpacer';
 
@@ -28,7 +27,10 @@ export function EmploymentTimeline() {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <ScrollArea className="bg-secondary whitespace-nowrap rounded-md border">
+        <ScrollArea
+          dir="rtl"
+          className="bg-secondary whitespace-nowrap rounded-md border text-center"
+        >
           <div className="flex space-x-4 p-4">
             <EmploymentTimelineCard
               title="Arrive Recommerce"
@@ -62,35 +64,35 @@ export function EmploymentTimeline() {
               title="NCLA"
               description="Jan 2013 - Dec 2016"
               url="https://www.shopncla.com/"
-              imageUrl="/employers/arriverecommerce.jpeg"
+              imageUrl="/employers/ncla.png"
             />
             <EmploymentTimelineSpacer />
             <EmploymentTimelineCard
               title="DoStuff Media"
               description="Jun 2012 - Jun 2015"
               url="https://dostuffmedia.com/"
-              imageUrl="/employers/arriverecommerce.jpeg"
+              imageUrl="/employers/dostuff.jpeg"
             />
             <EmploymentTimelineSpacer />
             <EmploymentTimelineCard
-              title="Echo & Echoplex"
+              title="The Echo & Echoplex"
               description="Aug 2010 - Feb 2013"
-              url="https://www.spacelandpresents.com/venues/echoplex/"
-              imageUrl="/employers/arriverecommerce.jpeg"
+              url="https://www.theecho.com/"
+              imageUrl="/employers/echo.jpg"
             />
             <EmploymentTimelineSpacer />
             <EmploymentTimelineCard
               title="30 Seconds to Mars"
               description="Jul 2009 - Jan 2012"
               url="https://www.thirtysecondstomars.com/"
-              imageUrl="/employers/arriverecommerce.jpeg"
+              imageUrl="/employers/30stm.jpg"
             />
             <EmploymentTimelineSpacer />
             <EmploymentTimelineCard
               title="YouTellConcerts.com"
               description="April 2008 - Jun 2011"
-              url="https://www.youtellconcerts.com/"
-              imageUrl="/employers/arriverecommerce.jpeg"
+              url="https://web.archive.org/web/20100731164946/http://youtellconcerts.com/"
+              imageUrl="/employers/ytc.png"
             />
           </div>
           <ScrollBar orientation="horizontal" />
