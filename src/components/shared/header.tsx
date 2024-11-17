@@ -17,10 +17,8 @@ export function Header() {
         </div>
       </div>
       <div
-        className="mt-4 flex w-full items-center justify-center p-2 sm:justify-start lg:mt-0 lg:p-0 "
-        style={{ background: `url(/jazzy.png)`, backgroundSize: 'cover' }}
-      >
-        <h1 className="text-shadow align-middle text-3xl font-medium lg:text-5xl xl:text-8xl">
+        className="mt-4 flex w-full items-center justify-center p-2 sm:justify-start lg:mt-0 lg:p-0">
+        <h1 className="align-middle text-3xl font-medium lg:text-5xl xl:text-8xl">
           BryanDuckworth<span className="text-2xl xl:text-6xl">.com</span>
         </h1>
       </div>
