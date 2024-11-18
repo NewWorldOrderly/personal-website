@@ -65,6 +65,9 @@ export function Header() {
           <div className="bg-secondary border-primary rounded-lg border-2 px-2 py-1">
             Sports: Rooting For the Los Angeles Rams!
           </div>
+          <div className="bg-secondary border-primary rounded-lg border-2 px-2 py-1">
+            Music: Favorite Band is the Gorillaz
+          </div>
         </Marquee>
         <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r to-transparent"></div>
         <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l to-transparent"></div>

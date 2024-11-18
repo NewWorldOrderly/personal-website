@@ -1,7 +1,8 @@
 'use client';
 
-import Globe from 'react-globe.gl';
 import { SlLocationPin } from 'react-icons/sl';
+
+import dynamic from 'next/dynamic';
 
 import {
   Card,
@@ -10,6 +11,8 @@ import {
   CardHeader,
   CardTitle,
 } from '../ui/card';
+
+const Globe = dynamic(() => import('react-globe.gl'), { ssr: false });
 
 export function LocationMap() {
   const myData = [
