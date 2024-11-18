@@ -1,4 +1,5 @@
 import { ThemeProvider } from '@/providers/theme-provider';
+import { CSPostHogProvider } from '@/providers/posthog-provider';
 
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
@@ -20,25 +21,27 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       {/* TODO: look into hydration error with theme */}
-      <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {/* Star layers */}
-          <div id="stars-layer-1" className="stars-layer"></div>
-          <div id="stars-layer-2" className="stars-layer"></div>
-          <div id="stars-layer-3" className="stars-layer"></div>
+      <CSPostHogProvider>
+        <body className={inter.className}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {/* Star layers */}
+            <div id="stars-layer-1" className="stars-layer"></div>
+            <div id="stars-layer-2" className="stars-layer"></div>
+            <div id="stars-layer-3" className="stars-layer"></div>
 
-          {/* Background image layer */}
-          <div id="background-image" className="background-layer"></div>
+            {/* Background image layer */}
+            <div id="background-image" className="background-layer"></div>
 
-          {/* Main content */}
-          {children}
-        </ThemeProvider>
-      </body>
+            {/* Main content */}
+            {children}
+          </ThemeProvider>
+        </body>
+      </CSPostHogProvider>
     </html>
   );
 }
