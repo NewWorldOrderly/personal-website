@@ -1,4 +1,4 @@
-import { AiFillGithub } from 'react-icons/ai';
+import { FaGithub } from 'react-icons/fa';
 
 import {
   Card,
@@ -19,7 +19,7 @@ export function GitHubContributions() {
       </CardHeader>
       <CardContent>
         <div className="flex items-center text-2xl font-bold">
-          <AiFillGithub className="text-primary mr-2 inline" />
+          <FaGithub className="text-primary mr-2 inline" />
           3,451
         </div>
       </CardContent>
