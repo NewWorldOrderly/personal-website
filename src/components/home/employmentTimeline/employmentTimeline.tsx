@@ -31,10 +31,10 @@ export function EmploymentTimeline() {
           dir="rtl"
           className="bg-secondary whitespace-nowrap rounded-md border text-center"
         >
-          <div className="flex space-x-4 p-4">
+          <div className="flex p-4">
             <EmploymentTimelineCard
               title="Arrive Recommerce"
-              description="Jul 2023 - Present"
+              description="Jul 2023 - Nov 2024"
               url="https://www.thearriveplatform.com/"
               imageUrl="/employers/arriverecommerce.jpeg"
             />

@@ -10,10 +10,10 @@ import {
 
 export function GitHubContributions() {
   return (
-    <Card>
+    <Card className="h-full">
       <CardHeader>
         <CardTitle className="text-base font-normal tracking-tight">
-          Total Contributions
+          GitHub Activity
         </CardTitle>
         <CardDescription>git commit -m &quot;:)&quot;</CardDescription>
       </CardHeader>

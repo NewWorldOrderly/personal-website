@@ -40,7 +40,7 @@ export function TimeZone({
 
   return (
     <div>
-      <div className="flex items-center space-x-3">
+      <div className="flex items-center text-xs lg:text-base">
         <div className="grow">
           <SlGlobeAlt />
         </div>
@@ -59,8 +59,8 @@ export function TimeZone({
         <div
           className={
             primary
-              ? 'text-primary grow text-right text-lg font-bold'
-              : 'grow text-right text-lg font-bold'
+              ? 'text-primary grow text-right text-xs font-bold lg:text-lg'
+              : 'grow text-right text-xs font-bold lg:text-lg'
           }
         >
           {time}

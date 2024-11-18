@@ -1,6 +1,7 @@
 'use client';
 
-// import { SlLocationPin } from "react-icons/sl";
+import Globe from 'react-globe.gl';
+import { SlLocationPin } from 'react-icons/sl';
 
 import {
   Card,
@@ -9,13 +10,6 @@ import {
   CardHeader,
   CardTitle,
 } from '../ui/card';
-
-// const Globe = dynamic(
-//   () => import('react-globe.gl').then((mod) => mod.default),
-//   {
-//     ssr: false,
-//   },
-// );
 
 export function LocationMap() {
   const myData = [
@@ -28,32 +22,33 @@ export function LocationMap() {
   ];
 
   return (
-    <Card>
+    <Card className="h-full">
       <CardHeader>
         <CardTitle className="text-base font-normal tracking-tight">
           Current Location
         </CardTitle>
         <CardDescription>
-          {/* <a
+          <a
             href="https://maps.app.goo.gl/qJCRfWYapDHo8Fad8"
             className="flex items-center"
           >
-            <SlLocationPin className="mr-1 text-primary" />
+            <SlLocationPin className="text-primary mr-1" />
             Tucson, Arizona
-          </a> */}
+          </a>
         </CardDescription>
       </CardHeader>
       <CardContent className="flex justify-center">
         <div className="w-min cursor-move">
-          {/* <Globe
+          <Globe
             globeImageUrl={'earth-dark.jpg'}
             backgroundColor="#00000000"
             pointsData={myData}
             pointAltitude="altitude"
             pointColor="color"
-            width={300}
-            height={300}
-          /> */}
+            width={350}
+            height={350}
+            animateIn={true}
+          />
         </div>
       </CardContent>
     </Card>

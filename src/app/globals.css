@@ -63,11 +63,15 @@
   * {
     @apply border-border;
   }
-  /* Base body styles */
+
   body {
-    @apply bg-background text-foreground pb-48;
+    @apply bg-background text-foreground;
     position: relative;
     overflow-x: hidden;
+  }
+
+  a {
+    @apply underline;
   }
 
   /* Star layers common properties */
@@ -185,7 +189,7 @@
     }
   }
 
-  a {
-    @apply underline;
+  .bg-highlight {
+    @apply bg-gradient-to-r bg-[length:200%_200%] from-accent to-primary animate-gradient;
   }
 }

@@ -1,6 +1,5 @@
-import plugin from 'tailwindcss/plugin';
-
 import type { Config } from 'tailwindcss';
+import plugin from 'tailwindcss/plugin';
 
 const config: Config = {
   darkMode: ['class'],
@@ -15,9 +14,6 @@ const config: Config = {
     container: {
       center: true,
       padding: '2rem',
-      screens: {
-        '2xl': '1400px',
-      },
     },
     extend: {
       colors: {
@@ -62,21 +58,53 @@ const config: Config = {
       },
       keyframes: {
         accordionDown: {
-          from: { height: '0' },
-          to: { height: 'var(--radix-accordion-content-height)' },
+          from: {
+            height: '0',
+          },
+          to: {
+            height: 'var(--radix-accordion-content-height)',
+          },
         },
         accordionUp: {
-          from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: '0' },
+          from: {
+            height: 'var(--radix-accordion-content-height)',
+          },
+          to: {
+            height: '0',
+          },
         },
         gradient: {
-          '0%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-          '100%': { backgroundPosition: '0% 50%' },
+          '0%': {
+            backgroundPosition: '0% 50%',
+          },
+          '50%': {
+            backgroundPosition: '100% 50%',
+          },
+          '100%': {
+            backgroundPosition: '0% 50%',
+          },
+        },
+        marquee: {
+          from: {
+            transform: 'translateX(0)',
+          },
+          to: {
+            transform: 'translateX(calc(-100% - var(--gap)))',
+          },
+        },
+        'marquee-vertical': {
+          from: {
+            transform: 'translateY(0)',
+          },
+          to: {
+            transform: 'translateY(calc(-100% - var(--gap)))',
+          },
         },
       },
       animation: {
         gradient: 'gradient 5s ease infinite',
+        marquee: 'marquee var(--duration) infinite linear',
+        'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
       },
       textShadow: {
         sm: '0px 1px 1px hsl(var(--secondary))',

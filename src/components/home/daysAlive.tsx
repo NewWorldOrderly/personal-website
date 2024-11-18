@@ -1,4 +1,4 @@
-import { FaEarthAmericas } from "react-icons/fa6";
+import { FaEarthAmericas } from 'react-icons/fa6';
 
 import {
   Card,
@@ -6,18 +6,18 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "../ui/card";
+} from '../ui/card';
 
 export function DaysAlive() {
   const currentDate = new Date();
-  const startDate = new Date("1982-12-12");
+  const startDate = new Date('1982-12-12');
   const differenceInMilliseconds = Number(currentDate) - Number(startDate);
   const differenceInDays = Math.floor(
     differenceInMilliseconds / (1000 * 60 * 60 * 24),
   );
 
   return (
-    <Card>
+    <Card className="h-full">
       <CardHeader>
         <CardTitle className="text-base font-normal tracking-tight">
           Total Days on Earth

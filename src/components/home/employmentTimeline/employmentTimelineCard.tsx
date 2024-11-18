@@ -1,13 +1,12 @@
-import Image from "next/image";
-import * as React from "react";
+import Image from 'next/image';
 
 import {
   Card,
+  CardContent,
+  CardDescription,
   CardHeader,
   CardTitle,
-  CardDescription,
-  CardContent,
-} from "../../ui/card";
+} from '../../ui/card';
 
 type EmploymentTimelineCardProps = {
   title: string;
@@ -23,7 +22,7 @@ export function EmploymentTimelineCard({
   imageUrl,
 }: Readonly<EmploymentTimelineCardProps>) {
   return (
-    <Card className="border-primary">
+    <Card className="border-primary ml-4">
       <CardHeader>
         <CardTitle className="text-base font-normal tracking-tight">
           {title}

@@ -1,21 +1,22 @@
-import { FaPizzaSlice } from "react-icons/fa6";
-import { GiTacos } from "react-icons/gi";
-import { MdOutlineRamenDining } from "react-icons/md";
-import { PiHamburgerLight } from "react-icons/pi";
+import { Separator } from '@/components/ui/separator';
 
-import { Separator } from "@/components/ui/separator";
+import { FaPizzaSlice } from 'react-icons/fa6';
+import { GiTacos } from 'react-icons/gi';
+import { IoBeer } from 'react-icons/io5';
+import { MdOutlineRamenDining } from 'react-icons/md';
+import { PiHamburger } from 'react-icons/pi';
 
 import {
   Card,
+  CardContent,
+  CardDescription,
   CardHeader,
   CardTitle,
-  CardDescription,
-  CardContent,
-} from "../ui/card";
+} from '../ui/card';
 
 export function FavoriteFoods() {
   return (
-    <Card>
+    <Card className="h-full">
       <CardHeader>
         <CardTitle className="text-base font-normal tracking-tight">
           Favorite Foods
@@ -28,7 +29,7 @@ export function FavoriteFoods() {
         </div>
         <Separator />
         <div className="pb-1 text-5xl">
-          <PiHamburgerLight />
+          <PiHamburger />
         </div>
         <Separator />
         <div className="pb-1 text-5xl">
@@ -37,6 +38,10 @@ export function FavoriteFoods() {
         <Separator />
         <div className="pb-1 text-5xl">
           <MdOutlineRamenDining />
+        </div>
+        <Separator />
+        <div className="pb-1 text-5xl">
+          <IoBeer />
         </div>
       </CardContent>
     </Card>

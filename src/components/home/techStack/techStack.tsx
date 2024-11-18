@@ -7,20 +7,19 @@ import {
   CardHeader,
   CardTitle,
 } from '../../ui/card';
-
 import { TechStackHover } from './techStackHover';
 
 export function TechStack() {
   return (
-    <Card className="border-accent border-2">
+    <Card className="border-accent relative h-full border-2">
+      <Badge className="bg-highlight absolute right-3 top-3">
+        10+ Years XP
+      </Badge>
       <CardHeader>
         <div className="flex justify-between">
-          <CardTitle className="text-base font-normal tracking-tight ">
+          <CardTitle className="text-base font-normal tracking-tight">
             Tech Stack
           </CardTitle>
-          <Badge className="from-accent to-primary animate-gradient bg-gradient-to-r bg-[length:200%_200%] text-white">
-            10+ Years XP
-          </Badge>
         </div>
 
         <CardDescription>Technologies I have experience with</CardDescription>
@@ -53,7 +52,7 @@ export function TechStack() {
             href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"
             title="HTML5"
             description="The latest evolution of the standard that defines HTML."
-            experience="Experience since 2015"
+            experience="Experience since 2000"
           />
           <TechStackHover
             icon="SiCss3"
@@ -67,7 +66,7 @@ export function TechStack() {
             href="https://tailwindcss.com/"
             title="Tailwind CSS"
             description="A utility-first CSS framework for rapidly building custom designs."
-            experience="Experience since 2012"
+            experience="Experience since 2020"
           />
           <TechStackHover
             icon="SiNodedotjs"

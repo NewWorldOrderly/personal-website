@@ -7,19 +7,18 @@ import {
   CardHeader,
   CardTitle,
 } from '../../ui/card';
-
 import { TimeZone } from './timeZone';
 
 export function WorldClock() {
   return (
-    <Card>
+    <Card className="h-full">
       <CardHeader>
         <CardTitle className="text-base font-normal tracking-tight">
           Time Zones
         </CardTitle>
         <CardDescription>What is time?</CardDescription>
       </CardHeader>
-      <CardContent className="space-y-3">
+      <CardContent className="space-y-3 text-xs">
         <Separator />
         <TimeZone label="Los Angeles, CA" timeZone="America/Los_Angeles" />
         <Separator />
@@ -33,6 +32,8 @@ export function WorldClock() {
         <TimeZone label="Denver, CO" timeZone="America/Denver" />
         <Separator />
         <TimeZone label="Houston, TX" timeZone="America/Chicago" />
+        <Separator />
+        <TimeZone label="New York, NY" timeZone="America/New_York" />
       </CardContent>
     </Card>
   );
