@@ -20,7 +20,7 @@ const DisabledOverlay: React.FC<DisabledOverlayProps> = ({
       {/* The overlay */}
       {isDisabled && (
         <div className="from-secondary via-secondary/50 absolute inset-0 flex h-full items-end rounded-b-lg bg-gradient-to-t to-transparent">
-          <div className="bg-destructive text-destructive-foreground flex w-full content-center justify-center rounded-b-lg p-2 text-center">
+          <div className="bg-destructive text-destructive-foreground flex w-full content-center justify-center rounded-b-lg p-2 text-center text-sm md:text-base">
             <span className="mr-2 self-center">
               <FaCircleExclamation />
             </span>
