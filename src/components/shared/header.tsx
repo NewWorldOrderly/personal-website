@@ -18,7 +18,7 @@ export function Header() {
           </div>
         </div>
         <div className="flex w-full items-center justify-center lg:w-auto lg:justify-start">
-          <h1 className="align-middle text-3xl font-medium lg:text-7xl xl:text-8xl">
+          <h1 className="text-center align-middle text-2xl font-medium sm:text-3xl lg:text-7xl xl:text-8xl">
             <HyperText
               className="text-muted-foreground"
               text="BryanDuckworth.com"
