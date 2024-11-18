@@ -1,13 +1,13 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
-
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
 } from '@/components/ui/hover-card';
 import { Skeleton } from '@/components/ui/skeleton';
+
+import React, { useEffect, useState } from 'react';
 
 type IconKeys = keyof typeof import('react-icons/si');
 type TechStackHoverProps = {
@@ -54,7 +54,7 @@ export function TechStackHover({
           </a>
         </HoverCardTrigger>
         <HoverCardContent className="w-80">
-          <div className="flex items-start justify-between space-x-4">
+          <div className="flex w-full items-center justify-between space-x-4 text-left ">
             <div className="text-4xl">
               {IconComponent ? <IconComponent /> : null}
             </div>

@@ -22,7 +22,7 @@ export function EmploymentTimelineCard({
   imageUrl,
 }: Readonly<EmploymentTimelineCardProps>) {
   return (
-    <Card className="border-primary ml-4">
+    <Card className="border-primary ml-4" dir="ltr">
       <CardHeader>
         <CardTitle className="text-base font-normal tracking-tight">
           {title}

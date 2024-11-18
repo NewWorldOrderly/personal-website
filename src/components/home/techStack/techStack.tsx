@@ -26,7 +26,7 @@ export function TechStack() {
         <CardDescription>Technologies I have experience with</CardDescription>
       </CardHeader>
       <CardContent>
-        <ScrollArea className="whitespace-nowrap text-center">
+        <ScrollArea className="text-center">
           <div className="flex space-x-2 text-2xl">
             <TechStackHover
               icon="SiTypescript"
