@@ -66,7 +66,7 @@ export default function Home() {
               <div className="col-span-12">
                 <DisabledOverlay
                   isDisabled={true}
-                  message="This feature is currently in being built..."
+                  message="This feature is currently being built..."
                 >
                   <Card>
                     <CardHeader>
@@ -96,7 +96,7 @@ export default function Home() {
             <div className="">
               <DisabledOverlay
                 isDisabled={true}
-                message="This feature is currently in being built..."
+                message="This feature is currently being built..."
               >
                 <Quacks />
               </DisabledOverlay>
