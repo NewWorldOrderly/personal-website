@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import {
   Card,
   CardContent,
@@ -14,7 +16,15 @@ export function IllusionCarousel() {
         <CardDescription>Optical illusions found online</CardDescription>
       </CardHeader>
       <CardContent>
-        <img src="/illusions/illusion001.jpg" alt="Optical illusion" />
+        <div className="h-auto w-full">
+          <Image
+            src="/illusions/illusion001.jpg"
+            alt="Optical illusion"
+            layout="responsive"
+            width={1}
+            height={1}
+          />
+        </div>
       </CardContent>
     </Card>
   );

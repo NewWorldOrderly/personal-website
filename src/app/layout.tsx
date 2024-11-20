@@ -1,6 +1,7 @@
-import { ThemeProvider } from '@/providers/theme-provider';
 import { CSPostHogProvider } from '@/providers/posthog-provider';
+import { ThemeProvider } from '@/providers/theme-provider';
 
+import { Analytics } from '@vercel/analytics/next';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
@@ -40,6 +41,7 @@ export default function RootLayout({
             {/* Main content */}
             {children}
           </ThemeProvider>
+          <Analytics />
         </body>
       </CSPostHogProvider>
     </html>
