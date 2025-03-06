@@ -33,45 +33,52 @@ export function EmploymentTimeline() {
         >
           <div className="flex p-4">
             <EmploymentTimelineCard
+              title="SKIMS"
+              description="Feb 2025 - Present"
+              url="https://www.skims.com/"
+              imageUrl="/employers/skims.jpg"
+            />
+            <EmploymentTimelineSpacer />
+            <EmploymentTimelineCard
               title="Arrive Recommerce"
               description="Jul 2023 - Nov 2024"
               url="https://www.thearriveplatform.com/"
-              imageUrl="/employers/arriverecommerce.jpeg"
+              imageUrl="/employers/arriverecommerce.jpg"
             />
             <EmploymentTimelineSpacer />
             <EmploymentTimelineCard
               title="Parachute Home"
               description="Jun 2015 - May 2023"
               url="https://www.parachutehome.com/"
-              imageUrl="/employers/parachutehome.jpeg"
+              imageUrl="/employers/parachutehome.jpg"
             />
             <EmploymentTimelineSpacer />
             <EmploymentTimelineCard
               title="Toyota of Australia"
               description="May 2014 - Dec 2014"
               url="https://www.toyota.com.au/"
-              imageUrl="/employers/toyota.jpeg"
+              imageUrl="/employers/toyota.jpg"
             />
             <EmploymentTimelineSpacer />
             <EmploymentTimelineCard
               title="Ellie.com"
               description="Feb 2013 - Aug 2013"
               url="https://www.ellie.com/"
-              imageUrl="/employers/ellie.webp"
+              imageUrl="/employers/ellie.jpg"
             />
             <EmploymentTimelineSpacer />
             <EmploymentTimelineCard
               title="NCLA"
               description="Jan 2013 - Dec 2016"
               url="https://www.shopncla.com/"
-              imageUrl="/employers/ncla.png"
+              imageUrl="/employers/ncla.jpg"
             />
             <EmploymentTimelineSpacer />
             <EmploymentTimelineCard
               title="DoStuff Media"
               description="Jun 2012 - Jun 2015"
               url="https://dostuffmedia.com/"
-              imageUrl="/employers/dostuff.jpeg"
+              imageUrl="/employers/dostuff.jpg"
             />
             <EmploymentTimelineSpacer />
             <EmploymentTimelineCard
@@ -92,7 +99,7 @@ export function EmploymentTimeline() {
               title="YouTellConcerts.com"
               description="April 2008 - Jun 2011"
               url="https://web.archive.org/web/20100731164946/http://youtellconcerts.com/"
-              imageUrl="/employers/ytc.png"
+              imageUrl="/employers/ytc.jpg"
             />
           </div>
           <ScrollBar orientation="horizontal" />
