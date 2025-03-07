@@ -14,7 +14,7 @@ export function TechStack() {
   return (
     <Card className="border-accent relative h-full border-2">
       <Badge className="bg-highlight absolute right-3 top-3">
-        10+ Years XP
+        15+ Years XP
       </Badge>
       <CardHeader>
         <div className="flex justify-between">

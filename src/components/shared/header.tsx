@@ -50,7 +50,8 @@ export function Header() {
       <div className="relative my-4 w-full overflow-hidden text-sm lg:text-base">
         <Marquee pauseOnHover className="[--duration:20s]">
           <div className="bg-highlight border-accent text-primary-foreground rounded-lg border-2 px-2 py-1">
-            <span className="font-bold">Breaking:</span> Recently Accepted an Offer at SKIMS!
+            <span className="font-bold">Breaking:</span> Recently Accepted an
+            Offer at SKIMS!
           </div>
           <div className="bg-secondary border-primary rounded-lg border-2 px-2 py-1">
             Family Man: Happily Married Father of Two
@@ -65,7 +66,7 @@ export function Header() {
             Music: Favorite Band is the Gorillaz
           </div>
           <div className="bg-secondary border-primary rounded-lg border-2 px-2 py-1">
-            Sports: Rooting For the Los Angeles Rams!
+            Sports: Rooting for the Los Angeles Dodgers! ⚾️
           </div>
         </Marquee>
         <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r to-transparent"></div>
