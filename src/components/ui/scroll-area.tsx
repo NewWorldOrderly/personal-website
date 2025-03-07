@@ -20,8 +20,14 @@ const ScrollArea = React.forwardRef<
   const scrollLeft = React.useRef(0);
   const scrollTop = React.useRef(0);
 
-  // Pointer down: begin tracking the drag
+  // Pointer down: check if click is on a link before initiating drag
   const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    // Check if the click target is a link or within a link
+    const target = e.target as HTMLElement;
+    if (target.closest('a')) {
+      return; // Don't initiate drag if clicking on a link
+    }
+
     if (!viewportRef.current) return;
     isDragging.current = true;
     // Capture the pointer for consistent tracking
@@ -43,9 +49,10 @@ const ScrollArea = React.forwardRef<
 
   // Pointer up or leave: end the dragging action
   const handlePointerUp = (e: React.PointerEvent<HTMLDivElement>) => {
-    if (!viewportRef.current) return;
     isDragging.current = false;
-    viewportRef.current.releasePointerCapture(e.pointerId);
+    if (viewportRef.current) {
+      viewportRef.current.releasePointerCapture(e.pointerId);
+    }
   };
 
   return (
