@@ -9,6 +9,7 @@ interface ContributionsResponse {
         totalPullRequestContributions: number;
         totalIssueContributions: number;
         totalPullRequestReviewContributions: number;
+        restrictedContributionsCount: number;
       };
     };
   };
@@ -31,6 +32,7 @@ export async function getContributions(): Promise<number> {
           totalPullRequestContributions
           totalIssueContributions
           totalPullRequestReviewContributions
+          restrictedContributionsCount
         }
       }
     }
@@ -59,7 +61,8 @@ export async function getContributions(): Promise<number> {
       c.totalCommitContributions +
       c.totalPullRequestContributions +
       c.totalIssueContributions +
-      c.totalPullRequestReviewContributions
+      c.totalPullRequestReviewContributions +
+      c.restrictedContributionsCount
     );
   } catch {
     return 0;
