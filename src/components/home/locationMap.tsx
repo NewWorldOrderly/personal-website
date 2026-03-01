@@ -1,5 +1,7 @@
 'use client';
 
+import { site } from '@/lib/site';
+
 import { SlLocationPin } from 'react-icons/sl';
 
 import dynamic from 'next/dynamic';
@@ -31,12 +33,9 @@ export function LocationMap() {
           Current Location
         </CardTitle>
         <CardDescription>
-          <a
-            href="https://maps.app.goo.gl/qJCRfWYapDHo8Fad8"
-            className="flex items-center"
-          >
+          <a href={site.profile.locationMapUrl} className="flex items-center">
             <SlLocationPin className="text-primary mr-1" />
-            Tucson, Arizona
+            {site.profile.location}
           </a>
         </CardDescription>
       </CardHeader>
