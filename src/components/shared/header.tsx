@@ -12,7 +12,7 @@ export function Header() {
         <div className="flex w-full items-center justify-center lg:w-auto lg:justify-start">
           <div className="border-primary rounded-full border-2 p-1">
             <Avatar className="h-20 w-20">
-              <AvatarImage src="https://ca.slack-edge.com/TC3FUBR9A-U05G4CYTNE8-495606ea2d2a-512" />
+              <AvatarImage src="/avatar.jpg" />
               <AvatarFallback>:)</AvatarFallback>
             </Avatar>
           </div>
@@ -27,22 +27,29 @@ export function Header() {
         </div>
         <div className="mx-auto w-auto lg:flex lg:justify-center lg:space-x-4 2xl:block 2xl:grow 2xl:content-end 2xl:justify-end">
           <div className="flex justify-between lg:space-x-4 2xl:justify-end">
-            <a href="https://github.com/NewWorldOrderly" className="">
+            <a
+              href="https://github.com/NewWorldOrderly"
+              aria-label="Bryan's GitHub profile"
+            >
               <span className="pr-2">GitHub</span>
-              <AiFillGithub className="inline" />
+              <AiFillGithub className="inline" aria-hidden="true" />
             </a>
-            <a href="https://www.linkedin.com/in/bryanduckworth/" className="">
+            <a
+              href="https://www.linkedin.com/in/bryanduckworth/"
+              aria-label="Bryan's LinkedIn profile"
+            >
               <span className="pr-2">LinkedIn</span>
-              <AiOutlineLinkedin className="inline" />
+              <AiOutlineLinkedin className="inline" aria-hidden="true" />
             </a>
           </div>
           <div className="lg:text-right">
             <a
               href="mailto:bryanduckworth@gmail.com"
               className="col-span-2 lg:col-span-1"
+              aria-label="Send Bryan an email"
             >
               <span className="pr-2">bryanduckworth@gmail.com</span>
-              <MdOutlineEmail className="inline" />
+              <MdOutlineEmail className="inline" aria-hidden="true" />
             </a>
           </div>
         </div>

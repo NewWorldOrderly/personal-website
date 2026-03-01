@@ -16,13 +16,13 @@ export function IllusionCarousel() {
         <CardDescription>Optical illusions found online</CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="h-auto w-full">
+        <div className="relative h-64 w-full">
           <Image
             src="/illusions/illusion001.jpg"
             alt="Optical illusion"
-            layout="responsive"
-            width={1}
-            height={1}
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-contain"
           />
         </div>
       </CardContent>
