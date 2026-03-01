@@ -1,5 +1,7 @@
+import { site } from '@/lib/site';
+
 const GITHUB_GRAPHQL_URL = 'https://api.github.com/graphql';
-const GITHUB_USERNAME = 'NewWorldOrderly';
+const GITHUB_USERNAME = site.socials.github.split('/').pop();
 
 interface ContributionsResponse {
   data: {
@@ -17,7 +19,7 @@ interface ContributionsResponse {
 
 export async function getContributions(): Promise<number> {
   const token = process.env.GITHUB_TOKEN;
-  if (!token) {
+  if (!token || !GITHUB_USERNAME) {
     return 0;
   }
 

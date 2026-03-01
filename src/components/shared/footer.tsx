@@ -1,3 +1,5 @@
+import { site } from '@/lib/site';
+
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -33,7 +35,7 @@ export function Footer() {
       <p className="text-xs">
         © {currentYear}{' '}
         <a href="https://ballersanonymo.us" target="_blank">
-          Ballers Anonymous
+          {site.brand}
         </a>
         . All rights reserved.
       </p>

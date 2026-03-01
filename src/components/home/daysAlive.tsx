@@ -1,3 +1,5 @@
+import { site } from '@/lib/site';
+
 import { FaEarthAmericas } from 'react-icons/fa6';
 
 import {
@@ -10,7 +12,7 @@ import {
 
 export function DaysAlive() {
   const currentDate = new Date();
-  const startDate = new Date('1982-12-12');
+  const startDate = new Date(site.profile.birthDate);
   const differenceInMilliseconds = Number(currentDate) - Number(startDate);
   const differenceInDays = Math.floor(
     differenceInMilliseconds / (1000 * 60 * 60 * 24),
