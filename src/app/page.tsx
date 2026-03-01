@@ -22,7 +22,6 @@ import DisabledOverlay from '@/components/ui/disabled-overlay';
 import { Separator } from '@/components/ui/separator';
 import { Textarea } from '@/components/ui/textarea';
 
-// eslint-disable-next-line import/no-default-export
 export default function Home() {
   return (
     <main className="container relative mx-auto mt-6 overflow-hidden">
