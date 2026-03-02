@@ -13,5 +13,15 @@ export const site = {
     birthDate: '1982-12-12',
     title: 'Full-stack engineer based in Tucson, AZ.',
     jobTitle: 'Full-Stack Engineer',
+    location: 'Tucson, Arizona',
+    locationMapUrl: 'https://maps.app.goo.gl/qJCRfWYapDHo8Fad8',
   },
+  marqueeItems: [
+    { text: 'Recently Accepted an Offer at SKIMS!', highlight: true },
+    { text: 'Family Man: Happily Married Father of Two' },
+    { text: 'Born & Raised: Originally From Houston, TX' },
+    { text: 'Hobbies: Cooking / Sports / Hiking / Video Games / Road Trips' },
+    { text: 'Music: Favorite Band is the Gorillaz' },
+    { text: 'Sports: Rooting for the Los Angeles Dodgers! ⚾️' },
+  ],
 };
