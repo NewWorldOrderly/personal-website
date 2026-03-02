@@ -1,7 +1,7 @@
 import { site } from '@/lib/site';
 
 const GITHUB_GRAPHQL_URL = 'https://api.github.com/graphql';
-const GITHUB_USERNAME = site.socials.github.split('/').pop();
+const GITHUB_USERNAME = site.socials.githubUsername || site.socials.github.split('/').filter(Boolean).pop();
 
 interface ContributionsResponse {
   data: {

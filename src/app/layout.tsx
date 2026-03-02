@@ -36,7 +36,7 @@ const jsonLd = {
   name: site.name,
   url: site.url,
   email: site.email,
-  jobTitle: 'Full-Stack Engineer',
+  jobTitle: site.profile.jobTitle,
   sameAs: [site.socials.github, site.socials.linkedin],
 };
 
