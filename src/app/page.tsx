@@ -1,27 +1,18 @@
+import { ChillChat } from '@/components/home/chillchat/chillchat';
 import { DaysAlive } from '@/components/home/daysAlive';
-import { NowSection } from '@/components/home/nowSection';
 import { EmploymentTimeline } from '@/components/home/employmentTimeline/employmentTimeline';
 import { FavoriteFoods } from '@/components/home/favoriteFoods';
 import { GitHubContributions } from '@/components/home/githubContributions';
 import { IllusionCarousel } from '@/components/home/illusionCarousel';
 import { LocationMap } from '@/components/home/locationMap';
+import { NowSection } from '@/components/home/nowSection';
 import { Quacks } from '@/components/home/quacks/quacks';
 import { TechStack } from '@/components/home/techStack/techStack';
 import { WorldClock } from '@/components/home/worldClock/worldClock';
 import { Footer } from '@/components/shared/footer';
 import { Header } from '@/components/shared/header';
 import { ModeToggle } from '@/components/shared/modeToggle';
-import { Button } from '@/components/ui/button';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
-import DisabledOverlay from '@/components/ui/disabled-overlay';
 import { Separator } from '@/components/ui/separator';
-import { Textarea } from '@/components/ui/textarea';
 
 export default function Home() {
   return (
@@ -45,9 +36,7 @@ export default function Home() {
               </div>
             </div>
             <div className="mb-4">
-              <div className="">
-                <EmploymentTimeline />
-              </div>
+              <EmploymentTimeline />
             </div>
             <div className="mb-4 flex flex-wrap gap-4 lg:items-stretch">
               <div className="w-full 2xl:w-1/2">
@@ -66,44 +55,12 @@ export default function Home() {
               <NowSection />
             </div>
             <div>
-              <div className="col-span-12">
-                <DisabledOverlay
-                  isDisabled={true}
-                  message="This feature is currently being built..."
-                >
-                  <Card>
-                    <CardHeader>
-                      <CardTitle>ChillChat.Online</CardTitle>
-                      <CardDescription>
-                        The most bodacious LLM on this side of the web
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="flex space-x-4">
-                        <Textarea
-                          className="bg-secondary h-[42px] min-h-[42px] w-full"
-                          placeholder="Type your message here..."
-                        />
-                        <Button className="disabled">Send</Button>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </DisabledOverlay>
-              </div>
+              <ChillChat />
             </div>
           </div>
           <div className="col-span-5 flex flex-col gap-4">
-            <div className="">
-              <IllusionCarousel />
-            </div>
-            <div className="">
-              <DisabledOverlay
-                isDisabled={true}
-                message="This feature is currently being built..."
-              >
-                <Quacks />
-              </DisabledOverlay>
-            </div>
+            <IllusionCarousel />
+            <Quacks />
           </div>
         </div>
         <Separator className="bg-accent my-8" />

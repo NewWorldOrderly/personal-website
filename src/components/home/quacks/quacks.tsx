@@ -1,16 +1,29 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '../../ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { sql } from '@/lib/db';
 
 import { Quack } from './quack';
 
-export function Quacks() {
+type QuackRow = {
+  id: number;
+  message: string;
+  created_at: string;
+};
+
+export async function Quacks() {
+  let quacks: QuackRow[] = [];
+
+  try {
+    quacks = (await sql`
+      SELECT id, message, created_at
+      FROM quacks
+      ORDER BY created_at DESC
+      LIMIT 20
+    `) as QuackRow[];
+  } catch {
+    // Silently fail — show empty state
+  }
+
   return (
     <Card>
       <CardHeader>
@@ -26,18 +39,11 @@ export function Quacks() {
         <CardDescription>Momentary lapse of reason</CardDescription>
       </CardHeader>
       <CardContent className="space-y-3">
-        <Quack
-          message="Currently working to make this a dynamic feed with a database."
-          timestamp={'2024-03-07T16:43:38-07:00'}
-        />
-        <Quack
-          message={`"He has the most who is most content with the least." - Diogenes`}
-          timestamp={'2024-03-07T16:42:05-07:00'}
-        />
-        <Quack
-          message="Instead of just sharing 'tweets'  what if I create my own quacks?"
-          timestamp={'2024-03-07T16:41:52-07:00'}
-        />
+        {quacks.length === 0 ? (
+          <p className="text-muted-foreground text-sm">No quacks yet.</p>
+        ) : (
+          quacks.map((q) => <Quack key={q.id} message={q.message} timestamp={q.created_at} />)
+        )}
       </CardContent>
     </Card>
   );
