@@ -24,4 +24,9 @@ export const site = {
     { text: 'Music: Favorite Band is the Gorillaz' },
     { text: 'Sports: Rooting for the Los Angeles Dodgers! ⚾️' },
   ],
+  now: [
+    'Working on autonomous agent workflows',
+    'Tuning model routing and reliability',
+    'Building a durable personal site',
+  ],
 };

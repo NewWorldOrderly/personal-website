@@ -1,4 +1,5 @@
 import { DaysAlive } from '@/components/home/daysAlive';
+import { NowSection } from '@/components/home/nowSection';
 import { EmploymentTimeline } from '@/components/home/employmentTimeline/employmentTimeline';
 import { FavoriteFoods } from '@/components/home/favoriteFoods';
 import { GitHubContributions } from '@/components/home/githubContributions';
@@ -60,6 +61,9 @@ export default function Home() {
                   <FavoriteFoods />
                 </div>
               </div>
+            </div>
+            <div className="mb-4">
+              <NowSection />
             </div>
             <div>
               <div className="col-span-12">
