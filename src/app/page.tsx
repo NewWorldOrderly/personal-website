@@ -51,15 +51,13 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="mb-4">
-              <NowSection />
-            </div>
             <div>
               <ChillChat />
             </div>
           </div>
           <div className="col-span-5 flex flex-col gap-4">
             <IllusionCarousel />
+            <NowSection />
             <Quacks />
           </div>
         </div>
