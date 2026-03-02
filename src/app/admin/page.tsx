@@ -21,15 +21,16 @@ export default function AdminPage() {
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState('');
 
-  useEffect(() => {
-    if (authed) loadQuacks();
-  }, [authed]);
-
   async function loadQuacks() {
     const res = await fetch('/api/quacks');
     const data = await res.json();
     setQuacks(Array.isArray(data) ? data : []);
   }
+
+  useEffect(() => {
+    if (authed) loadQuacks();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [authed]);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
