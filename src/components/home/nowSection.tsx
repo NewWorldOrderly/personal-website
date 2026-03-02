@@ -7,7 +7,7 @@ export function NowSection() {
     <Card>
       <CardHeader>
         <CardTitle className="text-base font-normal tracking-tight">Now</CardTitle>
-        <CardDescription>What I'm focused on right now</CardDescription>
+        <CardDescription>What I&apos;m focused on right now</CardDescription>
       </CardHeader>
       <CardContent>
         <ul className="list-disc pl-5">
