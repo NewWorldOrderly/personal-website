@@ -54,19 +54,19 @@ export function Header() {
         <Marquee pauseOnHover className="[--duration:20s]">
           {site.marqueeItems.map((item, idx) => (
             <div
-              key={item}
+              key={idx}
               className={`rounded-lg border-2 px-2 py-1 ${
-                idx === 0
+                item.highlight
                   ? 'bg-highlight border-accent text-primary-foreground'
                   : 'bg-secondary border-primary'
               }`}
             >
-              {idx === 0 ? (
+              {item.highlight ? (
                 <>
-                  <span className="font-bold">Breaking:</span> {item}
+                  <span className="font-bold">Breaking:</span> {item.text}
                 </>
               ) : (
-                item
+                item.text
               )}
             </div>
           ))}
