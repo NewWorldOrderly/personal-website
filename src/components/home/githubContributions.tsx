@@ -22,7 +22,7 @@ export async function GitHubContributions() {
         <CardDescription>
           {contributions > 0
             ? `${new Date().getFullYear()} contributions`
-            : 'git commit -m ":)"'}
+            : 'Connect GitHub token to show activity'}
         </CardDescription>
       </CardHeader>
       <CardContent>

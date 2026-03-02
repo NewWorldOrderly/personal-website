@@ -1,3 +1,5 @@
+import { site } from '@/lib/site';
+
 import { AiFillGithub, AiOutlineLinkedin } from 'react-icons/ai';
 import { MdOutlineEmail } from 'react-icons/md';
 
@@ -19,23 +21,17 @@ export function Header() {
         </div>
         <div className="flex w-full items-center justify-center lg:w-auto lg:justify-start">
           <h1 className="text-center align-middle text-2xl font-medium sm:text-3xl lg:text-7xl xl:text-8xl">
-            <HyperText
-              className="text-muted-foreground"
-              text="BryanDuckworth.com"
-            />
+            <HyperText className="text-muted-foreground" text={site.domain} />
           </h1>
         </div>
         <div className="mx-auto w-auto lg:flex lg:justify-center lg:space-x-4 2xl:block 2xl:grow 2xl:content-end 2xl:justify-end">
           <div className="flex justify-between lg:space-x-4 2xl:justify-end">
-            <a
-              href="https://github.com/NewWorldOrderly"
-              aria-label="Bryan's GitHub profile"
-            >
+            <a href={site.socials.github} aria-label="Bryan's GitHub profile">
               <span className="pr-2">GitHub</span>
               <AiFillGithub className="inline" aria-hidden="true" />
             </a>
             <a
-              href="https://www.linkedin.com/in/bryanduckworth/"
+              href={site.socials.linkedin}
               aria-label="Bryan's LinkedIn profile"
             >
               <span className="pr-2">LinkedIn</span>
@@ -44,11 +40,11 @@ export function Header() {
           </div>
           <div className="lg:text-right">
             <a
-              href="mailto:bryanduckworth@gmail.com"
+              href={`mailto:${site.email}`}
               className="col-span-2 lg:col-span-1"
               aria-label="Send Bryan an email"
             >
-              <span className="pr-2">bryanduckworth@gmail.com</span>
+              <span className="pr-2">{site.email}</span>
               <MdOutlineEmail className="inline" aria-hidden="true" />
             </a>
           </div>
