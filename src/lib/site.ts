@@ -17,7 +17,7 @@ export const site = {
     locationMapUrl: 'https://maps.app.goo.gl/qJCRfWYapDHo8Fad8',
   },
   marqueeItems: [
-    { text: 'Recently Accepted an Offer at SKIMS!', highlight: true },
+    { text: 'Working at SKIMS for over 1 year!', highlight: true },
     { text: 'Family Man: Happily Married Father of Two' },
     { text: 'Born & Raised: Originally From Houston, TX' },
     { text: 'Hobbies: Cooking / Sports / Hiking / Video Games / Road Trips' },
