@@ -2,6 +2,8 @@
 
 A running backlog of potential improvements for BryanDuckworth.com. These are grouped by theme so you can triage quickly.
 
+> Note: Some accessibility items are already addressed by PRs #10, #11, and #15. Consider migrating this list into GitHub Issues if you want per-item tracking and status.
+
 ## UX
 - Add “Now” section inline editing for Bryan (admin panel toggle + live preview).
 - Add a compact “About Bryan” card with a one‑sentence summary near the header.
