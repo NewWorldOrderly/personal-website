@@ -32,7 +32,7 @@ export async function Quacks() {
             <Avatar>
               <AvatarImage
                 src="https://ca.slack-edge.com/TC3FUBR9A-U05G4CYTNE8-495606ea2d2a-512"
-                alt="Quacks avatar"
+                alt="Bryan Duckworth"
               />
               <AvatarFallback>:)</AvatarFallback>
             </Avatar>
