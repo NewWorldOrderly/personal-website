@@ -3,8 +3,6 @@ import { NextResponse } from 'next/server';
 
 import { sql } from '@/lib/db';
 
-const client = new Anthropic();
-
 const RATE_LIMIT_MAX = 20;
 const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000; // 1 hour
 
@@ -60,6 +58,7 @@ export async function POST(request: Request) {
   }
 
   try {
+    const client = new Anthropic();
     const response = await client.messages.create({
       model: 'claude-haiku-4-5-20251001',
       max_tokens: 512,
