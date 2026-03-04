@@ -57,7 +57,7 @@ export function TechStack() {
               experience="Experience since 2000"
             />
             <TechStackHover
-              icon="SiCss3"
+              icon="SiCss"
               href="https://developer.mozilla.org/en-US/docs/Web/CSS"
               title="CSS3"
               description="The latest evolution of the Cascading Style Sheets language."
