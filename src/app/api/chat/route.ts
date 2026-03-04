@@ -51,23 +51,53 @@ export async function POST(request: Request) {
   }
 
   const body = await request.json().catch(() => null);
-  const message = body?.message?.trim();
+  const messages = Array.isArray(body?.messages)
+    ? body.messages.filter(
+        (message: { role?: string; content?: string }) =>
+          (message.role === 'user' || message.role === 'assistant') &&
+          typeof message.content === 'string' &&
+          message.content.trim().length > 0,
+      )
+    : [];
 
-  if (!message) {
-    return NextResponse.json({ error: 'Message is required' }, { status: 400 });
+  if (messages.length === 0) {
+    return NextResponse.json({ error: 'Messages are required' }, { status: 400 });
   }
 
   try {
     const client = new Anthropic();
-    const response = await client.messages.create({
+    const stream = await client.messages.create({
       model: 'claude-haiku-4-5-20251001',
       max_tokens: 512,
       system: SYSTEM_PROMPT,
-      messages: [{ role: 'user', content: message }],
+      messages,
+      stream: true,
     });
 
-    const text = response.content[0].type === 'text' ? response.content[0].text : '';
-    return NextResponse.json({ message: text });
+    const encoder = new TextEncoder();
+
+    const readable = new ReadableStream({
+      async start(controller) {
+        try {
+          for await (const event of stream) {
+            if (event.type === 'content_block_delta' && event.delta.type === 'text_delta') {
+              controller.enqueue(encoder.encode(event.delta.text));
+            }
+          }
+        } catch {
+          controller.error();
+        } finally {
+          controller.close();
+        }
+      },
+    });
+
+    return new Response(readable, {
+      headers: {
+        'Content-Type': 'text/plain; charset=utf-8',
+        'Cache-Control': 'no-cache, no-transform',
+      },
+    });
   } catch {
     return NextResponse.json({ error: 'Something went sideways. Try again.' }, { status: 500 });
   }
