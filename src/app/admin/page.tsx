@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -27,9 +27,6 @@ export default function AdminPage() {
     setQuacks(Array.isArray(data) ? data : []);
   }, []);
 
-  useEffect(() => {
-    if (authed) loadQuacks();
-  }, [authed, loadQuacks]);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -83,6 +80,7 @@ export default function AdminPage() {
               onSubmit={(e) => {
                 e.preventDefault();
                 setAuthed(true);
+                loadQuacks();
               }}
               className="space-y-4"
             >
