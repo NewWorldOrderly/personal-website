@@ -124,7 +124,7 @@ export function ChillChat() {
               <button
                 key={starter}
                 type="button"
-                className="bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-full px-3 py-1 text-xs transition"
+                className="bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-full px-3 py-1 text-xs transition-transform duration-150 hover:scale-[1.02]"
                 onClick={() => handleSend(starter)}
                 disabled={loading}
               >
@@ -166,7 +166,7 @@ export function ChillChat() {
             {error}
           </p>
         )}
-        <div className="flex space-x-4">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:gap-4">
           <Textarea
             className="bg-secondary h-[42px] min-h-[42px] w-full"
             placeholder="Type your message..."

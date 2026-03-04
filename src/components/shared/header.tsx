@@ -14,7 +14,7 @@ export function Header() {
         <div className="flex w-full items-center justify-center lg:w-auto lg:justify-start">
           <div className="border-primary rounded-full border-2 p-1">
             <Avatar className="h-20 w-20">
-              <AvatarImage src="/avatar.jpg" />
+              <AvatarImage src="/avatar.jpg" alt="Bryan Duckworth" />
               <AvatarFallback>:)</AvatarFallback>
             </Avatar>
           </div>
