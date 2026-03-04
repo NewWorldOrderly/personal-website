@@ -53,9 +53,16 @@ export async function POST(request: Request) {
   }
 
   const body = await request.json().catch(() => null);
-  const messages = body?.messages;
+  const messages = Array.isArray(body?.messages)
+    ? body.messages.filter(
+        (message: { role?: string; content?: string }) =>
+          (message.role === 'user' || message.role === 'assistant') &&
+          typeof message.content === 'string' &&
+          message.content.trim().length > 0,
+      )
+    : [];
 
-  if (!Array.isArray(messages) || messages.length === 0) {
+  if (messages.length === 0) {
     return NextResponse.json({ error: 'Messages are required' }, { status: 400 });
   }
 

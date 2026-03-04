@@ -68,7 +68,7 @@ export function ChillChat() {
       if (!res.ok || !res.body) {
         const data = await res.json().catch(() => ({}));
         setError(data.error || 'Something went wrong.');
-        setMessages((prev) => prev.slice(0, -1));
+        setMessages((prev) => prev.slice(0, -2));
         return;
       }
 
@@ -98,7 +98,7 @@ export function ChillChat() {
       }
     } catch {
       setError('Could not reach the server. Try again.');
-      setMessages((prev) => prev.slice(0, -1));
+      setMessages((prev) => prev.slice(0, -2));
     } finally {
       setLoading(false);
     }
@@ -152,17 +152,20 @@ export function ChillChat() {
                     ? 'bg-primary text-primary-foreground max-w-[80%] rounded-lg px-3 py-2'
                     : 'bg-secondary max-w-[80%] rounded-lg px-3 py-2'
                 }
+                role={message.role === 'assistant' ? 'status' : undefined}
+                aria-live={message.role === 'assistant' ? 'polite' : undefined}
               >
                 {message.content || (loading && message.role === 'assistant' ? '…' : '')}
               </div>
             </div>
           ))}
-          {loading && (
-            <div className="text-muted-foreground text-xs">thinking…</div>
-          )}
           <div ref={scrollAnchorRef} />
         </div>
-        {error && <p className="text-destructive text-sm">{error}</p>}
+        {error && (
+          <p className="text-destructive text-sm" role="alert">
+            {error}
+          </p>
+        )}
         <div className="flex space-x-4">
           <Textarea
             className="bg-secondary h-[42px] min-h-[42px] w-full"
