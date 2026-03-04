@@ -44,6 +44,29 @@ export async function POST(request: Request) {
   }
 }
 
+export async function PATCH(request: Request) {
+  if (!isAuthorized(request)) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+
+  const body = await request.json().catch(() => null);
+  const { id, message } = body ?? {};
+  const trimmed = message?.trim();
+
+  if (!id || !trimmed) {
+    return NextResponse.json({ error: 'ID and message are required' }, { status: 400 });
+  }
+
+  try {
+    const [quack] = await sql`
+      UPDATE quacks SET message = ${trimmed} WHERE id = ${id} RETURNING id, message, created_at
+    `;
+    return NextResponse.json(quack);
+  } catch {
+    return NextResponse.json({ error: 'Failed to update quack' }, { status: 500 });
+  }
+}
+
 export async function DELETE(request: Request) {
   if (!isAuthorized(request)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
