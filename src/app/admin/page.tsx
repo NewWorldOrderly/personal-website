@@ -29,8 +29,12 @@ type ChatStats = {
 };
 
 export default function AdminPage() {
-  const [token, setToken] = useState('');
-  const [authed, setAuthed] = useState(false);
+  const [token, setToken] = useState(() =>
+    typeof window !== 'undefined' ? (sessionStorage.getItem('admin_token') ?? '') : ''
+  );
+  const [authed, setAuthed] = useState(() =>
+    typeof window !== 'undefined' ? !!sessionStorage.getItem('admin_token') : false
+  );
   const [message, setMessage] = useState('');
   const [quacks, setQuacks] = useState<Quack[]>([]);
   const [loading, setLoading] = useState(false);
@@ -61,17 +65,14 @@ export default function AdminPage() {
     if (res.ok) setStats(await res.json());
   }, []);
 
-  // Auto-authenticate from sessionStorage on mount
+  // Load data on mount if already authenticated
   useEffect(() => {
-    const saved = sessionStorage.getItem('admin_token');
-    if (saved) {
-      setToken(saved);
-      setAuthed(true);
+    if (authed && token) {
       loadQuacks();
       loadNowItems();
-      loadStats(saved);
+      loadStats(token);
     }
-  }, [loadQuacks, loadNowItems, loadStats]);
+  }, [authed, token, loadQuacks, loadNowItems, loadStats]);
 
   function handleAuth(e: React.FormEvent) {
     e.preventDefault();
