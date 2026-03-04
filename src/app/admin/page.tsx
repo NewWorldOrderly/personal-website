@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -21,16 +21,15 @@ export default function AdminPage() {
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState('');
 
-  async function loadQuacks() {
+  const loadQuacks = useCallback(async () => {
     const res = await fetch('/api/quacks');
     const data = await res.json();
     setQuacks(Array.isArray(data) ? data : []);
-  }
+  }, []);
 
   useEffect(() => {
     if (authed) loadQuacks();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [authed]);
+  }, [authed, loadQuacks]);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
