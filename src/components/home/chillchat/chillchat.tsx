@@ -57,9 +57,19 @@ export function ChillChat() {
       </CardHeader>
       <CardContent className="space-y-3">
         {response && (
-          <div className="bg-secondary rounded-md p-3 text-sm leading-relaxed">{response}</div>
+          <div
+            className="bg-secondary rounded-md p-3 text-sm leading-relaxed"
+            role="status"
+            aria-live="polite"
+          >
+            {response}
+          </div>
         )}
-        {error && <p className="text-destructive text-sm">{error}</p>}
+        {error && (
+          <p className="text-destructive text-sm" role="alert">
+            {error}
+          </p>
+        )}
         <div className="flex space-x-4">
           <Textarea
             className="bg-secondary h-[42px] min-h-[42px] w-full"
