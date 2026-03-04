@@ -66,6 +66,7 @@ export default function AdminPage() {
   }, []);
 
   // Load data on mount if already authenticated
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => {
     if (authed && token) {
       loadQuacks();
