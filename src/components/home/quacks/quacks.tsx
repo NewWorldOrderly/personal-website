@@ -30,7 +30,10 @@ export async function Quacks() {
         <CardTitle className="flex items-center text-2xl font-normal tracking-tight">
           <div className="border-primary mr-2 rounded-full border-2 p-1">
             <Avatar>
-              <AvatarImage src="https://ca.slack-edge.com/TC3FUBR9A-U05G4CYTNE8-495606ea2d2a-512" />
+              <AvatarImage
+                src="https://ca.slack-edge.com/TC3FUBR9A-U05G4CYTNE8-495606ea2d2a-512"
+                alt="Quacks avatar"
+              />
               <AvatarFallback>:)</AvatarFallback>
             </Avatar>
           </div>
