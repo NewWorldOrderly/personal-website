@@ -65,8 +65,8 @@ export default function AdminPage() {
     if (res.ok) setStats(await res.json());
   }, []);
 
-  // Load data on mount if already authenticated
-  // eslint-disable-next-line react-hooks/set-state-in-effect
+  // Load data on mount if already authenticated (setState calls are async, not synchronous)
+  /* eslint-disable react-hooks/set-state-in-effect */
   useEffect(() => {
     if (authed && token) {
       loadQuacks();
@@ -74,6 +74,7 @@ export default function AdminPage() {
       loadStats(token);
     }
   }, [authed, token, loadQuacks, loadNowItems, loadStats]);
+  /* eslint-enable react-hooks/set-state-in-effect */
 
   function handleAuth(e: React.FormEvent) {
     e.preventDefault();
